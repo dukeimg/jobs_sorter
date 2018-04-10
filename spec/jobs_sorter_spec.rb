@@ -47,6 +47,15 @@ describe 'JobsSorter', :module do
     end
   end
 
+  context 'nested structure #3' do
+    let(:input) { { a: 'f', b: 'c', c: 'f', d: 'a', e: 'b', f: nil }.to_json }
+
+    it 'returns a sorted sequence' do
+      expected_sequence = %w[f a c b d e]
+      expect(subject).to eq(expected_sequence)
+    end
+  end
+
   context 'self-dependence' do
     let(:input) { { a: nil, b: nil, c: 'c' }.to_json }
 
