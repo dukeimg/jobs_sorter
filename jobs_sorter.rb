@@ -3,7 +3,7 @@
 require 'json'
 
 module JobsSorter
-  module_function
+  extend self
 
   def run(input)
     return [] if input.empty?
@@ -18,6 +18,8 @@ module JobsSorter
       end
     end.uniq
   end
+
+  private
 
   def resolve_dependencies(job, jobs)
     [].tap do |chain|
