@@ -1,5 +1,7 @@
 module JobsSorter
-  def sort(input)
+  module_function
+
+  def run(input)
     input
   end
 end
