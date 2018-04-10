@@ -15,6 +15,7 @@
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
 require 'byebug'
+require 'json'
 require './jobs_sorter'
 
 RSpec.configure do |config|
