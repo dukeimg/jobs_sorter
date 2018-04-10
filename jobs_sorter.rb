@@ -19,8 +19,6 @@ module JobsSorter
   end
 
   def resolve_dependencies(job, jobs)
-    dependency = jobs.fetch(job)
-    return [] if dependency.nil?
     [].tap do |chain|
       loop do
         validate_dependency_chain(chain)
