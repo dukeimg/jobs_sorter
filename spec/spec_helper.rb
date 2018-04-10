@@ -13,6 +13,8 @@
 # it.
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
+#
+# # frozen_string_literal: true
 
 require 'byebug'
 require 'json'

@@ -1,5 +1,6 @@
+# frozen_string_literal: true
+
 require 'json'
-require 'byebug'
 
 module JobsSorter
   module_function
@@ -35,6 +36,6 @@ module JobsSorter
   end
 
   def validate_dependency_chain(chain)
-    raise ArgumentError, "Jobs dependencies can't loop"  if chain.uniq != chain
+    raise ArgumentError, "Jobs dependencies can't loop" if chain.uniq != chain
   end
 end
